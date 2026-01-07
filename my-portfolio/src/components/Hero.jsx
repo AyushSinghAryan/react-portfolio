@@ -106,19 +106,39 @@ function Hero() {
                     Hi , I'm <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
                         Ayush Singh Aryan
                     </span>
-                    {/* Animated text */}
-                    <motion.div variants={itemVariants} className="h-16 mb-6">
-                        <h2 className="text-2xl md:text-4xl text-gray-200 font-light">
-                            I'm a {` `}
-                            <span className="text-cyan-300 border-r-2 border-cyan-300">{displayText}</span>
-                        </h2>
-                    </motion.div>
-                    {/* Description */}
-                    <motion.p variants={itemVariants} className=""></motion.p>
                 </motion.h1>
+
+                {/* Animated text */}
+                <motion.div variants={itemVariants} className="h-16 mb-6">
+                    <h2 className="text-2xl md:text-4xl text-gray-200 font-light">
+                        I'm a {` `}
+                        <span className="text-cyan-300 border-r-2 border-cyan-300">{displayText}</span>
+                    </h2>
+                </motion.div>
+                {/* Description */}
+                <motion.p variants={itemVariants} className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Full-stack developer with hands-on experience building scalable MERN and Flask applications, focused on clean APIs, secure authentication, and real-world problem solving.                    </motion.p>
+                {/* CTA Button */}
+                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <motion.button onClick={scrollToSkills} whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-4 bg-linear-to-r from-blue-500 to-cyan-500 text-white rounded-full font-semibold text-lg hover:shadow-xl transition-all duration-300"
+                    >
+                        View My Work
+
+                    </motion.button>
+                    <motion.button onClick={scrollToSkills} whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-8 py-4 border-2 border-gray-400/30 text-white rounded-full font-semibold text-lg hover:bg-gray-800/50 transition-all duration-300"
+                    >
+                        Download CV
+
+                    </motion.button>
+                </motion.div>
 
             </motion.div>
         </section>
     )
 }
 export default Hero
+
